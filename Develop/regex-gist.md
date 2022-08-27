@@ -41,3 +41,50 @@ Quantifiers in regex expressions are `?`, `*`, `+`, `.`, and `{x,y}`. The `?` sy
 ### OR Operator
 
 The OR operator in regular expressions are pipe characters, `|`. This can be used to provide more than one term for an expression.
+
+### Character Classes
+
+Character classes are usually represented with square brackets `[]`. Letters and numbers can be placed inside the brackets to state certain requirements. For example, `[A-Z]` means that characters can range anywhere from A to Z but they will be case-sensitive. It will be the same when teh bracket looks like this, `[a-z]`. When `[\d]` is used, this will be a representation for digits (0-9). This is also equivalent to `[0-9]`.
+
+### Flags
+
+Flags can be used to modify searches in regular expressions. The flags will change how the string search will be interpreted. Here are a list of common flags used:
+
+- i : This will cause the search to be case-insensitive which means that there will be no difference between A and a.
+- g : This stands for global search. This will look for all matches.
+- m : This flag stands for multiline mode. This will find matches on multiple lines.
+- s : This flag is known as a dotall. It will match any character along with newline characters.
+- u : This enables full unicode support. Which means that the flag enables correct processing of surrogate pairs. It is used for extended unicode.
+- y : this is known as sticky mode. This will allow for searching at the exact position in the text.
+
+### Grouping and Capturing
+
+Groups are represented by `()` and can contain multiple expressions. Groups are used in an expression to narrow down password parameters. When there are multiple expressions in a group, it is considered a capture group.
+
+### Bracket Expressions
+
+Bracket expressions are characters that are placed inside of `[]`. It will be able to match a single character in the list inside of the bracket.
+
+### Greedy and Lazy Match
+
+Lazy match means to repeat minimal number of times. Which means that it will match to a few characters as possible. For greedy match, it is the opposite of lazy match. The quantified character will be repeated as many times as possible.
+
+### Boundaries
+
+Boundaries are shown in two ways:
+
+- \b : is also recognized as an anchor. It matches at a position called a word boundary. It is a zero-length match. This allows tou ro perform "whole words only" search.
+
+- \B : this will match at every and any position between two word characters. It can also be at any position between two non-word characters as well. This is known as a not word boundary.
+
+### Back-references
+
+Back-references match the same text as previouslt matched by a capturing group. These are also known as numeric references.
+
+### Look-ahead and Look-behind
+
+Look-ahead and look-behind are collectively called "look-around". These are zero-length assertions that match characters but then gives up the match. This will only return the result, match or no match.
+
+## Author
+
+My name is Lisa Le and I am a full stack developer student. You can find more of my work at https://github.com/LisaTLe.
